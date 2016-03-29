@@ -1,0 +1,11 @@
+language: generic
+dist: trusty
+addons:
+  apt:
+    packages:
+    - pv
+
+install:
+- sudo apt-get install pv
+script:
+- cat /dev/urandom | pv -N 'Progress' > /dev/null
