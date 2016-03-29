@@ -1,4 +1,4 @@
-language: generic
+language: python
 dist: trusty
 addons:
   apt:
@@ -8,4 +8,5 @@ addons:
 install:
 - sudo apt-get install pv
 script:
-- cat /dev/urandom | pv -N 'Progress' > /dev/null
+- python progress-bar.py
+- cat /dev/urandom | pv -pfN 'Progress' > /dev/null
