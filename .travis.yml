@@ -1,5 +1,5 @@
 sudo: true
 services:
   - docker
-before_install:
+script:
 - wget ftp://ftp.twaren.net/pub/cpatch/msupdate/win2000/en/w2ksp4_en.exe
