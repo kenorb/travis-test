@@ -3,6 +3,3 @@ services:
   - docker
 before_install:
 - wget ftp://ftp.twaren.net/pub/cpatch/msupdate/win2000/en/w2ksp4_en.exe
-- wget https://web.archive.org/web/2000/ftp://ftp.twaren.net/pub/cpatch/msupdate/win2000/en/w2ksp4_en.exe
-install:
-- docker run --entrypoint /bin/bash ea31337/fx-mt-vm /opt/scripts/install_mt4.sh
