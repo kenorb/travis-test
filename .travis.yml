@@ -1,7 +1,8 @@
 sudo: true
+services:
+  - docker
+before_install:
+- wget ftp://ftp.twaren.net/pub/cpatch/msupdate/win2000/en/w2ksp4_en.exe
+- wget https://web.archive.org/web/2000/ftp://ftp.twaren.net/pub/cpatch/msupdate/win2000/en/w2ksp4_en.exe
 install:
-- sudo wget -qO /usr/local/bin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks && sudo chmod +x /usr/local/bin/winetricks
-before_script:
-- sudo bash - < <(wget -qO- https://raw.githubusercontent.com/EA31337/FX-MT-VM/master/scripts/provision.sh)
-script:
-- sh -x /usr/local/bin/winetricks winhttp
+- docker run --entrypoint /bin/bash ea31337/fx-mt-vm /opt/scripts/install_mt4.sh
