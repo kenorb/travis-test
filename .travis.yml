@@ -1,5 +1,9 @@
 sudo: true
 services:
   - docker
+env:
+  matrix:
+  - URL=ftp://ftp.twaren.net/pub/cpatch/msupdate/win2000/en/w2ksp4_en.exe
+  - URL=http://ftp.upf.br/pub/win2k/w2ksp4_en.exe
 script:
-- wget ftp://ftp.twaren.net/pub/cpatch/msupdate/win2000/en/w2ksp4_en.exe
+- wget $URL
