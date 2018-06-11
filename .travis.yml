@@ -4,6 +4,8 @@ services:
 env:
   matrix:
   - URL=ftp://ftp.twaren.net/pub/cpatch/msupdate/win2000/en/w2ksp4_en.exe
+  - URL=http://ftp.twaren.net/cpatch/msupdate/win2000/en/w2ksp4_en.exe
   - URL=http://ftp.upf.br/pub/win2k/w2ksp4_en.exe
+  - URL=http://ftp.gnome.org/mirror/archive/ftp.sunet.se/pub/security/vendor/microsoft/win2000/Service_Packs/usa/W2KSP4_EN.EXE
 script:
 - wget $URL
