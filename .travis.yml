@@ -1,5 +1,8 @@
 dist: trusty
 sudo: required
+before_script:
+- echo GOROOT=$GOROOT
+- go env
 script:
 - curl -s https://raw.githubusercontent.com/udhos/update-golang/master/update-golang.sh | sudo bash -
 - sudo install -v -m755 /usr/local/go/bin/go* /usr/local/bin/
