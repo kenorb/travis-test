@@ -1,0 +1,6 @@
+language: generic
+sudo: required
+group: deprecated-2017Q4
+script:
+- curl https://dl.winehq.org/wine-builds/winehq.key
+- sudo apt-key add < <(curl -sq https://dl.winehq.org/wine-builds/winehq.key)
